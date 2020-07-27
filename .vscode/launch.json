@@ -10,8 +10,6 @@
             "request": "launch",
             "program": "lib/welcome.dart"
         },
-      
-
 
         {
             "name": "Flutter",
