@@ -16,7 +16,7 @@ class TabBarClass extends StatelessWidget {
                   Tab(icon: Icon(Icons.account_circle),)
                 ],
               ),
-              title: Text('Tabs Demo'),
+              title: Text('Tabs'),
             ),
             body: TabBarView(
               children: [
