@@ -223,7 +223,339 @@ class TabBarClass extends StatelessWidget {
                       ),*/
                     ],
                   ),
-                  Text("All Events"),
+                  ListView(children: <Widget>[
+                    Card(
+                      child: ListTile(
+                        leading: FlutterLogo(size: 72.0),
+                        title: Text('Lorem Ipsum'),
+                        subtitle: Text('Category\nTime Period (Frequency)'),
+                        trailing: Text('0.0'),
+                        /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                        isThreeLine: true,
+                        onTap: () {},
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: FlutterLogo(size: 72.0),
+                        title: Text('Lorem Ipsum'),
+                        subtitle: Text('Category\nTime Period (Frequency)'),
+                        trailing: Text('0.0'),
+                        /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                        isThreeLine: true,
+                        onTap: () {},
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: FlutterLogo(size: 72.0),
+                        title: Text('Lorem Ipsum'),
+                        subtitle: Text('Category\nTime Period (Frequency)'),
+                        trailing: Text('0.0'),
+                        /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                        isThreeLine: true,
+                        onTap: () {},
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: FlutterLogo(size: 72.0),
+                        title: Text('Lorem Ipsum'),
+                        subtitle: Text('Category\nTime Period (Frequency)'),
+                        trailing: Text('0.0'),
+                        /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                        isThreeLine: true,
+                        onTap: () {},
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: FlutterLogo(size: 72.0),
+                        title: Text('Lorem Ipsum'),
+                        subtitle: Text('Category\nTime Period (Frequency)'),
+                        trailing: Text('0.0'),
+                        /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                        isThreeLine: true,
+                        onTap: () {},
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: FlutterLogo(size: 72.0),
+                        title: Text('Lorem Ipsum'),
+                        subtitle: Text('Category\nTime Period (Frequency)'),
+                        trailing: Text('0.0'),
+                        /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                        isThreeLine: true,
+                        onTap: () {},
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: FlutterLogo(size: 72.0),
+                        title: Text('Lorem Ipsum'),
+                        subtitle: Text('Category\nTime Period (Frequency)'),
+                        trailing: Text('0.0'),
+                        /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                        isThreeLine: true,
+                        onTap: () {},
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: FlutterLogo(size: 72.0),
+                        title: Text('Lorem Ipsum'),
+                        subtitle: Text('Category\nTime Period (Frequency)'),
+                        trailing: Text('0.0'),
+                        /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                        isThreeLine: true,
+                        onTap: () {},
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: FlutterLogo(size: 72.0),
+                        title: Text('Lorem Ipsum'),
+                        subtitle: Text('Category\nTime Period (Frequency)'),
+                        trailing: Text('0.0'),
+                        /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                        isThreeLine: true,
+                        onTap: () {},
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: FlutterLogo(size: 72.0),
+                        title: Text('Lorem Ipsum'),
+                        subtitle: Text('Category\nTime Period (Frequency)'),
+                        trailing: Text('0.0'),
+                        /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                        isThreeLine: true,
+                        onTap: () {},
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: FlutterLogo(size: 72.0),
+                        title: Text('Lorem Ipsum'),
+                        subtitle: Text('Category\nTime Period (Frequency)'),
+                        trailing: Text('0.0'),
+                        /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                        isThreeLine: true,
+                        onTap: () {},
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: FlutterLogo(size: 72.0),
+                        title: Text('Lorem Ipsum'),
+                        subtitle: Text('Category\nTime Period (Frequency)'),
+                        trailing: Text('0.0'),
+                        /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                        isThreeLine: true,
+                        onTap: () {},
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: FlutterLogo(size: 72.0),
+                        title: Text('Lorem Ipsum'),
+                        subtitle: Text('Category\nTime Period (Frequency)'),
+                        trailing: Text('0.0'),
+                        /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                        isThreeLine: true,
+                        onTap: () {},
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: FlutterLogo(size: 72.0),
+                        title: Text('Lorem Ipsum'),
+                        subtitle: Text('Category\nTime Period (Frequency)'),
+                        trailing: Text('0.0'),
+                        /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                        isThreeLine: true,
+                        onTap: () {},
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: FlutterLogo(size: 72.0),
+                        title: Text('Lorem Ipsum'),
+                        subtitle: Text('Category\nTime Period (Frequency)'),
+                        trailing: Text('0.0'),
+                        /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                        isThreeLine: true,
+                        onTap: () {},
+                      ),
+                    ),
+                  ]),
+                  // Text("All Events"),
                   Text("Search"),
                   Text("Settings")
                   /*
