@@ -4,6 +4,9 @@ class TabBarClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        theme: ThemeData(
+          primarySwatch: Colors.green,
+        ),
         debugShowCheckedModeBanner: false,
         home: DefaultTabController(
             length: 4,
@@ -23,6 +26,7 @@ class TabBarClass extends StatelessWidget {
               ),
               body: TabBarView(
                 children: [
+                  /*
                   DataTable(
                     columns: const <DataColumn>[
                       DataColumn(
@@ -75,6 +79,77 @@ class TabBarClass extends StatelessWidget {
                           DataCell(Text("4.2"))
                         ],
                       ),
+                    ],
+                  ),*/
+                  ListView(
+                    children: <Widget>[
+                      Card(
+                        child: ListTile(
+                          leading: FlutterLogo(size: 72.0),
+                          title: Text('Singapore Food Festival'),
+                          subtitle: Text('Food\n10/7/20 - 26/7/20'),
+                          // trailing: Icon(Icons.more_vert),
+                          trailing: Text('3.9'),
+                          /*
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow[600],
+                              ),
+                              Text('3.9')
+                            ],
+                          ),
+                          */
+                          isThreeLine: true,
+                        ),
+                      ),
+                      /*
+                      Card(child: ListTile(title: Text('One-line ListTile'))),
+                      Card(
+                        child: ListTile(
+                          leading: FlutterLogo(),
+                          title: Text('One-line with leading widget'),
+                        ),
+                      ),
+                      Card(
+                        child: ListTile(
+                          title: Text('One-line with trailing widget'),
+                          trailing: Icon(Icons.more_vert),
+                        ),
+                      ),
+                      Card(
+                        child: ListTile(
+                          leading: FlutterLogo(),
+                          title: Text('One-line with both widgets'),
+                          trailing: Icon(Icons.more_vert),
+                        ),
+                      ),
+                      Card(
+                        child: ListTile(
+                          title: Text('One-line dense ListTile'),
+                          dense: true,
+                        ),
+                      ),
+                      Card(
+                        child: ListTile(
+                          leading: FlutterLogo(size: 56.0),
+                          title: Text('Two-line ListTile'),
+                          subtitle: Text('Here is a second line'),
+                          trailing: Icon(Icons.more_vert),
+                        ),
+                      ),
+                      Card(
+                        child: ListTile(
+                          leading: FlutterLogo(size: 72.0),
+                          title: Text('Three-line ListTile'),
+                          subtitle: Text(
+                              'A sufficiently long subtitle warrants three lines.'),
+                          trailing: Icon(Icons.more_vert),
+                          isThreeLine: true,
+                        ),
+                      ),*/
                     ],
                   ),
                   Text("All Events"),
