@@ -22,66 +22,70 @@ class TabBarClass extends StatelessWidget {
                 ),
                 title: Text('Reserva'),
                 actions: <Widget>[
-                  IconButton(icon: Icon(Icons.search), onPressed: () {})
+                  IconButton(
+                      icon: Icon(Icons.search),
+                      onPressed: () {
+                        showSearch(context: context, delegate: Search());
+                      })
                 ],
               ),
               body: TabBarView(
                 children: [
                   /*
-                  DataTable(
-                    columns: const <DataColumn>[
-                      DataColumn(
-                        label: Text(
-                          'Name',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      DataColumn(
-                        label: Text(
-                          'Date',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      DataColumn(
-                        label: Text(
-                          'Category',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      DataColumn(
-                        label: Text(
-                          'Rating',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ],
-                    rows: const <DataRow>[
-                      DataRow(
-                        cells: <DataCell>[
-                          DataCell(Text('Singapore Food Festival')),
-                          DataCell(Text('10/7/20-26/7/20')),
-                          DataCell(Text('Food')),
-                          DataCell(Text("4.6"))
-                        ],
-                      ),
-                      DataRow(
-                        cells: <DataCell>[
-                          DataCell(Text('Grand Prix Singapore')),
-                          DataCell(Text('11/7/20-20/7/20')),
-                          DataCell(Text('Races, \$38')),
-                          DataCell(Text("3.9"))
-                        ],
-                      ),
-                      DataRow(
-                        cells: <DataCell>[
-                          DataCell(Text('Singapore Art Week')),
-                          DataCell(Text('15/9/20-22/9/20')),
-                          DataCell(Text('Charity and Causes')),
-                          DataCell(Text("4.2"))
-                        ],
-                      ),
-                    ],
-                  ),*/
+                                          DataTable(
+                                            columns: const <DataColumn>[
+                                              DataColumn(
+                                                label: Text(
+                                                  'Name',
+                                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                                ),
+                                              ),
+                                              DataColumn(
+                                                label: Text(
+                                                  'Date',
+                                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                                ),
+                                              ),
+                                              DataColumn(
+                                                label: Text(
+                                                  'Category',
+                                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                                ),
+                                              ),
+                                              DataColumn(
+                                                label: Text(
+                                                  'Rating',
+                                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                                ),
+                                              ),
+                                            ],
+                                            rows: const <DataRow>[
+                                              DataRow(
+                                                cells: <DataCell>[
+                                                  DataCell(Text('Singapore Food Festival')),
+                                                  DataCell(Text('10/7/20-26/7/20')),
+                                                  DataCell(Text('Food')),
+                                                  DataCell(Text("4.6"))
+                                                ],
+                                              ),
+                                              DataRow(
+                                                cells: <DataCell>[
+                                                  DataCell(Text('Grand Prix Singapore')),
+                                                  DataCell(Text('11/7/20-20/7/20')),
+                                                  DataCell(Text('Races, \$38')),
+                                                  DataCell(Text("3.9"))
+                                                ],
+                                              ),
+                                              DataRow(
+                                                cells: <DataCell>[
+                                                  DataCell(Text('Singapore Art Week')),
+                                                  DataCell(Text('15/9/20-22/9/20')),
+                                                  DataCell(Text('Charity and Causes')),
+                                                  DataCell(Text("4.2"))
+                                                ],
+                                              ),
+                                            ],
+                                          ),*/
                   ListView(
                     children: <Widget>[
                       Card(
@@ -91,17 +95,17 @@ class TabBarClass extends StatelessWidget {
                           subtitle: Text('Food\n11/7/20 - 20/7/20 (Annually)'),
                           trailing: Text('4.6'),
                           /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                           isThreeLine: true,
                           onTap: () {},
                         ),
@@ -114,17 +118,17 @@ class TabBarClass extends StatelessWidget {
                           // trailing: Icon(Icons.more_vert),
                           trailing: Text('3.9'),
                           /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                           isThreeLine: true,
                           onTap: () {},
                         ),
@@ -138,17 +142,17 @@ class TabBarClass extends StatelessWidget {
                           // trailing: Icon(Icons.more_vert),
                           trailing: Text('4.2'),
                           /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                           isThreeLine: true,
                           onTap: () {},
                         ),
@@ -162,66 +166,66 @@ class TabBarClass extends StatelessWidget {
                           // trailing: Icon(Icons.more_vert),
                           trailing: Text('5.0'),
                           /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                           isThreeLine: true,
                           onTap: () {},
                         ),
                       ),
                       /*
-                      Card(child: ListTile(title: Text('One-line ListTile'))),
-                      Card(
-                        child: ListTile(
-                          leading: FlutterLogo(),
-                          title: Text('One-line with leading widget'),
-                        ),
-                      ),
-                      Card(
-                        child: ListTile(
-                          title: Text('One-line with trailing widget'),
-                          trailing: Icon(Icons.more_vert),
-                        ),
-                      ),
-                      Card(
-                        child: ListTile(
-                          leading: FlutterLogo(),
-                          title: Text('One-line with both widgets'),
-                          trailing: Icon(Icons.more_vert),
-                        ),
-                      ),
-                      Card(
-                        child: ListTile(
-                          title: Text('One-line dense ListTile'),
-                          dense: true,
-                        ),
-                      ),
-                      Card(
-                        child: ListTile(
-                          leading: FlutterLogo(size: 56.0),
-                          title: Text('Two-line ListTile'),
-                          subtitle: Text('Here is a second line'),
-                          trailing: Icon(Icons.more_vert),
-                        ),
-                      ),
-                      Card(
-                        child: ListTile(
-                          leading: FlutterLogo(size: 72.0),
-                          title: Text('Three-line ListTile'),
-                          subtitle: Text(
-                              'A sufficiently long subtitle warrants three lines.'),
-                          trailing: Icon(Icons.more_vert),
-                          isThreeLine: true,
-                        ),
-                      ),*/
+                                              Card(child: ListTile(title: Text('One-line ListTile'))),
+                                              Card(
+                                                child: ListTile(
+                                                  leading: FlutterLogo(),
+                                                  title: Text('One-line with leading widget'),
+                                                ),
+                                              ),
+                                              Card(
+                                                child: ListTile(
+                                                  title: Text('One-line with trailing widget'),
+                                                  trailing: Icon(Icons.more_vert),
+                                                ),
+                                              ),
+                                              Card(
+                                                child: ListTile(
+                                                  leading: FlutterLogo(),
+                                                  title: Text('One-line with both widgets'),
+                                                  trailing: Icon(Icons.more_vert),
+                                                ),
+                                              ),
+                                              Card(
+                                                child: ListTile(
+                                                  title: Text('One-line dense ListTile'),
+                                                  dense: true,
+                                                ),
+                                              ),
+                                              Card(
+                                                child: ListTile(
+                                                  leading: FlutterLogo(size: 56.0),
+                                                  title: Text('Two-line ListTile'),
+                                                  subtitle: Text('Here is a second line'),
+                                                  trailing: Icon(Icons.more_vert),
+                                                ),
+                                              ),
+                                              Card(
+                                                child: ListTile(
+                                                  leading: FlutterLogo(size: 72.0),
+                                                  title: Text('Three-line ListTile'),
+                                                  subtitle: Text(
+                                                      'A sufficiently long subtitle warrants three lines.'),
+                                                  trailing: Icon(Icons.more_vert),
+                                                  isThreeLine: true,
+                                                ),
+                                              ),*/
                     ],
                   ),
                   ListView(children: <Widget>[
@@ -232,17 +236,17 @@ class TabBarClass extends StatelessWidget {
                         subtitle: Text('Category\nTime Period (Frequency)'),
                         trailing: Text('0.0'),
                         /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                         isThreeLine: true,
                         onTap: () {},
                       ),
@@ -254,17 +258,17 @@ class TabBarClass extends StatelessWidget {
                         subtitle: Text('Category\nTime Period (Frequency)'),
                         trailing: Text('0.0'),
                         /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                         isThreeLine: true,
                         onTap: () {},
                       ),
@@ -276,17 +280,17 @@ class TabBarClass extends StatelessWidget {
                         subtitle: Text('Category\nTime Period (Frequency)'),
                         trailing: Text('0.0'),
                         /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                         isThreeLine: true,
                         onTap: () {},
                       ),
@@ -298,17 +302,17 @@ class TabBarClass extends StatelessWidget {
                         subtitle: Text('Category\nTime Period (Frequency)'),
                         trailing: Text('0.0'),
                         /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                         isThreeLine: true,
                         onTap: () {},
                       ),
@@ -320,17 +324,17 @@ class TabBarClass extends StatelessWidget {
                         subtitle: Text('Category\nTime Period (Frequency)'),
                         trailing: Text('0.0'),
                         /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                         isThreeLine: true,
                         onTap: () {},
                       ),
@@ -342,17 +346,17 @@ class TabBarClass extends StatelessWidget {
                         subtitle: Text('Category\nTime Period (Frequency)'),
                         trailing: Text('0.0'),
                         /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                         isThreeLine: true,
                         onTap: () {},
                       ),
@@ -364,17 +368,17 @@ class TabBarClass extends StatelessWidget {
                         subtitle: Text('Category\nTime Period (Frequency)'),
                         trailing: Text('0.0'),
                         /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                         isThreeLine: true,
                         onTap: () {},
                       ),
@@ -386,17 +390,17 @@ class TabBarClass extends StatelessWidget {
                         subtitle: Text('Category\nTime Period (Frequency)'),
                         trailing: Text('0.0'),
                         /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                         isThreeLine: true,
                         onTap: () {},
                       ),
@@ -408,17 +412,17 @@ class TabBarClass extends StatelessWidget {
                         subtitle: Text('Category\nTime Period (Frequency)'),
                         trailing: Text('0.0'),
                         /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                         isThreeLine: true,
                         onTap: () {},
                       ),
@@ -430,17 +434,17 @@ class TabBarClass extends StatelessWidget {
                         subtitle: Text('Category\nTime Period (Frequency)'),
                         trailing: Text('0.0'),
                         /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                         isThreeLine: true,
                         onTap: () {},
                       ),
@@ -452,17 +456,17 @@ class TabBarClass extends StatelessWidget {
                         subtitle: Text('Category\nTime Period (Frequency)'),
                         trailing: Text('0.0'),
                         /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                         isThreeLine: true,
                         onTap: () {},
                       ),
@@ -474,17 +478,17 @@ class TabBarClass extends StatelessWidget {
                         subtitle: Text('Category\nTime Period (Frequency)'),
                         trailing: Text('0.0'),
                         /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                         isThreeLine: true,
                         onTap: () {},
                       ),
@@ -496,17 +500,17 @@ class TabBarClass extends StatelessWidget {
                         subtitle: Text('Category\nTime Period (Frequency)'),
                         trailing: Text('0.0'),
                         /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                         isThreeLine: true,
                         onTap: () {},
                       ),
@@ -518,17 +522,17 @@ class TabBarClass extends StatelessWidget {
                         subtitle: Text('Category\nTime Period (Frequency)'),
                         trailing: Text('0.0'),
                         /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                         isThreeLine: true,
                         onTap: () {},
                       ),
@@ -540,17 +544,17 @@ class TabBarClass extends StatelessWidget {
                         subtitle: Text('Category\nTime Period (Frequency)'),
                         trailing: Text('0.0'),
                         /*
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow[600],
-                              ),
-                              Text('3.9')
-                            ],
-                          ),
-                          */
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: <Widget>[
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.yellow[600],
+                                                      ),
+                                                      Text('3.9')
+                                                    ],
+                                                  ),
+                                                  */
                         isThreeLine: true,
                         onTap: () {},
                       ),
@@ -560,11 +564,11 @@ class TabBarClass extends StatelessWidget {
                   // Text("Search"),
                   Text("Settings")
                   /*
-                  Icon(Icons.calendar_today),
-                  Icon(Icons.event),
-                  Icon(Icons.search),
-                  Icon(Icons.account_circle)
-                  */
+                                          Icon(Icons.calendar_today),
+                                          Icon(Icons.event),
+                                          Icon(Icons.search),
+                                          Icon(Icons.account_circle)
+                                          */
                 ],
               ),
             )));
