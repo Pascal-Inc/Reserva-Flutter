@@ -9,20 +9,21 @@ class TabBarClass extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         home: DefaultTabController(
-            length: 4,
+            length: 3,
             child: Scaffold(
               appBar: AppBar(
                 bottom: TabBar(
                   tabs: [
                     Tab(icon: Icon(Icons.calendar_today)),
                     Tab(icon: Icon(Icons.event)),
-                    Tab(icon: Icon(Icons.search)),
-                    Tab(
-                      icon: Icon(Icons.account_circle),
-                    )
+                    // Tab(icon: Icon(Icons.search)),
+                    Tab(icon: Icon(Icons.account_circle))
                   ],
                 ),
                 title: Text('Reserva'),
+                actions: <Widget>[
+                  IconButton(icon: Icon(Icons.search), onPressed: () {})
+                ],
               ),
               body: TabBarView(
                 children: [
@@ -556,7 +557,7 @@ class TabBarClass extends StatelessWidget {
                     ),
                   ]),
                   // Text("All Events"),
-                  Text("Search"),
+                  // Text("Search"),
                   Text("Settings")
                   /*
                   Icon(Icons.calendar_today),
