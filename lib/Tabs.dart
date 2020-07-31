@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 
-class TabBarClass extends StatelessWidget {
+class TabBarClass extends StatefulWidget {
+  @override
+  _TabBarClassState createState() => _TabBarClassState();
+}
+
+class _TabBarClassState extends State<TabBarClass> {
+  Icon customIcon = Icon(Icons.search);
+  Widget customSearchBar = Text("App Name");
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,12 +28,28 @@ class TabBarClass extends StatelessWidget {
                     Tab(icon: Icon(Icons.account_circle))
                   ],
                 ),
-                title: Text('Reserva'),
+                title: customSearchBar,
                 actions: <Widget>[
                   IconButton(
-                      icon: Icon(Icons.search),
+                      icon: customIcon,
                       onPressed: () {
-                        showSearch(context: context, delegate: Search());
+                        setState(() {
+                          if (this.customIcon.icon == Icons.search) {
+                            this.customIcon = Icon(Icons.clear);
+                            this.customSearchBar = TextField(
+                              textInputAction: TextInputAction.go,
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18),
+                              decoration: InputDecoration(
+                                  border: InputBorder.none,
+                                  hintStyle: TextStyle(color: Colors.white),
+                                  hintText: "Search"),
+                            );
+                          } else {
+                            this.customIcon = Icon(Icons.search);
+                            this.customSearchBar = Text("AppBar");
+                          }
+                        });
                       })
                 ],
               ),
@@ -142,6 +166,7 @@ class TabBarClass extends StatelessWidget {
                           // trailing: Icon(Icons.more_vert),
                           trailing: Text('4.2'),
                           /*
+                          
                                                   Row(
                                                     crossAxisAlignment: CrossAxisAlignment.center,
                                                     children: <Widget>[
@@ -181,6 +206,7 @@ class TabBarClass extends StatelessWidget {
                           onTap: () {},
                         ),
                       ),
+                      // ),
                       /*
                                               Card(child: ListTile(title: Text('One-line ListTile'))),
                                               Card(
@@ -560,6 +586,7 @@ class TabBarClass extends StatelessWidget {
                       ),
                     ),
                   ]),
+
                   // Text("All Events"),
                   // Text("Search"),
                   Text("Settings")
