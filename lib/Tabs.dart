@@ -6,7 +6,7 @@ class TabBarClass extends StatefulWidget {
 }
 
 class _TabBarClassState extends State<TabBarClass> {
-  Icon customIcon = Icon(Icons.search);
+  Widget customIcon = Icon(Icons.search);
   Widget customSearchBar = Text("App Name");
 
   @override
@@ -35,7 +35,7 @@ class _TabBarClassState extends State<TabBarClass> {
                       onPressed: () {
                         setState(() {
                           if (this.customIcon.icon == Icons.search) {
-                            this.customIcon = Icon(Icons.clear);
+                            this.customIcon = AnimatedIcon(icon: Icons.clear, progress: true)
                             this.customSearchBar = TextField(
                               textInputAction: TextInputAction.go,
                               style:
