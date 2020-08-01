@@ -6,7 +6,7 @@ class TabBarClass extends StatefulWidget {
 }
 
 class _TabBarClassState extends State<TabBarClass> {
-  Widget customIcon = Icon(Icons.search);
+  Icon customIcon = Icon(Icons.search);
   Widget customSearchBar = Text("App Name");
 
   @override
@@ -17,15 +17,15 @@ class _TabBarClassState extends State<TabBarClass> {
         ),
         debugShowCheckedModeBanner: false,
         home: DefaultTabController(
-            length: 3,
+            length: 2,
             child: Scaffold(
               appBar: AppBar(
                 bottom: TabBar(
                   tabs: [
-                    Tab(icon: Icon(Icons.calendar_today)),
-                    Tab(icon: Icon(Icons.event)),
+                    Tab(icon: Icon(Icons.event), text: "Upcoming"),
+                    Tab(icon: Icon(Icons.calendar_today), text: "All"),
                     // Tab(icon: Icon(Icons.search)),
-                    Tab(icon: Icon(Icons.account_circle))
+                    // Tab(icon: Icon(Icons.account_circle), text: "Account")
                   ],
                 ),
                 title: customSearchBar,
@@ -35,7 +35,8 @@ class _TabBarClassState extends State<TabBarClass> {
                       onPressed: () {
                         setState(() {
                           if (this.customIcon.icon == Icons.search) {
-                            this.customIcon = AnimatedIcon(icon: Icons.clear, progress: true)
+                            // showSearch(context: context, delegate: Search());
+                            this.customIcon = Icon(Icons.clear);
                             this.customSearchBar = TextField(
                               textInputAction: TextInputAction.go,
                               style:
@@ -52,6 +53,51 @@ class _TabBarClassState extends State<TabBarClass> {
                         });
                       })
                 ],
+              ),
+              drawer: Drawer(
+                child: ListView(
+                  padding: EdgeInsets.zero,
+                  children: const <Widget>[
+                    DrawerHeader(
+                      decoration: BoxDecoration(
+                        color: Colors.green,
+                      ),
+                      child: //ListView()
+                          // Icon(Icons.account_circle),
+                          Text(
+                        'Settings',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 24,
+                        ),
+                      ),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.account_circle),
+                      title: Text('Account'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.enhanced_encryption),
+                      title: Text('Privacy'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.security),
+                      title: Text('Security'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.notifications),
+                      title: Text('Notifications'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.help),
+                      title: Text('Help'),
+                    ),
+                    ListTile(
+                      title:
+                          Text("Log Out", style: TextStyle(color: Colors.red)),
+                    )
+                  ],
+                ),
               ),
               body: TabBarView(
                 children: [
@@ -589,7 +635,7 @@ class _TabBarClassState extends State<TabBarClass> {
 
                   // Text("All Events"),
                   // Text("Search"),
-                  Text("Settings")
+                  // Text("Settings")
                   /*
                                           Icon(Icons.calendar_today),
                                           Icon(Icons.event),
@@ -601,6 +647,15 @@ class _TabBarClassState extends State<TabBarClass> {
             )));
   }
 }
+
+/*
+class Search extends SearchDelegate {
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    throw UnimplementedError();
+  }
+}
+*/
 
 /*
 Swift Code for reference:
