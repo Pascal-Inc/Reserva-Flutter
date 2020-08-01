@@ -7,7 +7,7 @@ class TabBarClass extends StatefulWidget {
 
 class _TabBarClassState extends State<TabBarClass> {
   Icon customIcon = Icon(Icons.search);
-  Widget customSearchBar = Text("App Name");
+  Widget customSearchBar = Text("Reserva");
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +57,7 @@ class _TabBarClassState extends State<TabBarClass> {
               drawer: Drawer(
                 child: ListView(
                   padding: EdgeInsets.zero,
-                  children: const <Widget>[
+                  children: <Widget>[
                     DrawerHeader(
                       decoration: BoxDecoration(
                         color: Colors.green,
@@ -73,29 +73,29 @@ class _TabBarClassState extends State<TabBarClass> {
                       ),
                     ),
                     ListTile(
-                      leading: Icon(Icons.account_circle),
-                      title: Text('Account'),
-                    ),
+                        leading: Icon(Icons.account_circle),
+                        title: Text('Account'),
+                        onTap: () {}),
                     ListTile(
-                      leading: Icon(Icons.enhanced_encryption),
-                      title: Text('Privacy'),
-                    ),
+                        leading: Icon(Icons.enhanced_encryption),
+                        title: Text('Privacy'),
+                        onTap: () {}),
                     ListTile(
-                      leading: Icon(Icons.security),
-                      title: Text('Security'),
-                    ),
+                        leading: Icon(Icons.security),
+                        title: Text('Security'),
+                        onTap: () {}),
                     ListTile(
-                      leading: Icon(Icons.notifications),
-                      title: Text('Notifications'),
-                    ),
+                        leading: Icon(Icons.notifications),
+                        title: Text('Notifications'),
+                        onTap: () {}),
                     ListTile(
-                      leading: Icon(Icons.help),
-                      title: Text('Help'),
-                    ),
+                        leading: Icon(Icons.help),
+                        title: Text('Help'),
+                        onTap: () {}),
                     ListTile(
-                      title:
-                          Text("Log Out", style: TextStyle(color: Colors.red)),
-                    )
+                        title: Text("Log Out",
+                            style: TextStyle(color: Colors.red)),
+                        onTap: () {})
                   ],
                 ),
               ),
