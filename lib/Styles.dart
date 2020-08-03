@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:reserva_flutter/Home.dart';
 import 'package:reserva_flutter/Settings/Account.dart';
 import 'package:reserva_flutter/Settings/Help.dart';
 import 'package:reserva_flutter/Settings/Notifications.dart';
 import 'package:reserva_flutter/Settings/Privacy.dart';
 import 'package:reserva_flutter/Settings/Security.dart';
-import 'package:reserva_flutter/Tabs.dart';
 
 class DrawerThing extends StatelessWidget {
   @override
@@ -14,6 +12,20 @@ class DrawerThing extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
+          UserAccountsDrawerHeader(
+            accountName: Text("Name Surname"),
+            accountEmail: Text("name_surname@domainName.domainSuffix"),
+            currentAccountPicture: CircleAvatar(
+              backgroundColor: Theme.of(context).platform == TargetPlatform.iOS
+                  ? Colors.blue
+                  : Colors.white,
+              child: Text(
+                "N",
+                style: TextStyle(fontSize: 40.0),
+              ),
+            ),
+          ),
+          /*
           DrawerHeader(
             decoration: BoxDecoration(
               color: Colors.green,
@@ -28,14 +40,12 @@ class DrawerThing extends StatelessWidget {
               ),
             ),
           ),
+          */
           ListTile(
               leading: Icon(Icons.home),
               title: Text('Home'),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TabBarClass()),
-                );
+                Navigator.pop(context);
               }),
           ListTile(
               leading: Icon(Icons.account_circle),
