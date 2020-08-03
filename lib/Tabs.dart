@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reserva_flutter/Styles.dart';
 
 class TabBarClass extends StatefulWidget {
   @override
@@ -54,51 +55,7 @@ class _TabBarClassState extends State<TabBarClass> {
                       })
                 ],
               ),
-              drawer: Drawer(
-                child: ListView(
-                  padding: EdgeInsets.zero,
-                  children: <Widget>[
-                    DrawerHeader(
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                      ),
-                      child: //ListView()
-                          // Icon(Icons.account_circle),
-                          Text(
-                        'Settings',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                        ),
-                      ),
-                    ),
-                    ListTile(
-                        leading: Icon(Icons.account_circle),
-                        title: Text('Account'),
-                        onTap: () {}),
-                    ListTile(
-                        leading: Icon(Icons.enhanced_encryption),
-                        title: Text('Privacy'),
-                        onTap: () {}),
-                    ListTile(
-                        leading: Icon(Icons.security),
-                        title: Text('Security'),
-                        onTap: () {}),
-                    ListTile(
-                        leading: Icon(Icons.notifications),
-                        title: Text('Notifications'),
-                        onTap: () {}),
-                    ListTile(
-                        leading: Icon(Icons.help),
-                        title: Text('Help'),
-                        onTap: () {}),
-                    ListTile(
-                        title: Text("Log Out",
-                            style: TextStyle(color: Colors.red)),
-                        onTap: () {})
-                  ],
-                ),
-              ),
+              drawer: DrawerThing(),
               body: TabBarView(
                 children: [
                   /*

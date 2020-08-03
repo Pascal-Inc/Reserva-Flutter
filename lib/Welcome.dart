@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reserva_flutter/Settings/Account.dart';
 // import 'package:reserva_flutter/Home.dart';
 import 'package:reserva_flutter/Tabs.dart';
 
@@ -13,6 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Reserva Flutter Home Page',
+        routes: <String, WidgetBuilder>{
+          '/Account': (BuildContext context) => new AccountClass()
+        },
         theme: ThemeData(
           // This is the theme of your application.
           //
