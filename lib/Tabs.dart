@@ -588,8 +588,7 @@ class _TabBarClassState extends State<TabBarClass> {
                         onTap: () {},
                       ),
                     ),
-                  ]),
-
+                  ])
                   // Text("All Events"),
                   // Text("Search"),
                   // Text("Settings")
