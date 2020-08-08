@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         home: Scaffold(
-          // appBar: AppBar(title: Text('Random')),
+          //   appBar: AppBar(title: Text('Random')),
           body: TabBarClass(),
         ) /* HomePage()*/ // TabBarClass() // MyHomePage(title: 'Reserva Flutter Home Page'),
         );
@@ -71,6 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
+    6;
   }
 
   @override
