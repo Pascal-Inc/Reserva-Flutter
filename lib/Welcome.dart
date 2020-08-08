@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:reserva_flutter/Home.dart';
 import 'package:reserva_flutter/Settings/Account.dart';
 import 'package:reserva_flutter/Tabs.dart';
 
@@ -71,7 +70,6 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
-    6;
   }
 
   @override
