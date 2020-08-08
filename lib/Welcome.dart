@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reserva_flutter/Home.dart';
 import 'package:reserva_flutter/Settings/Account.dart';
+import 'package:reserva_flutter/Tabs.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,8 +34,8 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         home: Scaffold(
-          appBar: AppBar(title: Text('Random')),
-          body: SnackBarPage(),
+          // appBar: AppBar(title: Text('Random')),
+          body: TabBarClass(),
         ) /* HomePage()*/ // TabBarClass() // MyHomePage(title: 'Reserva Flutter Home Page'),
         );
   }

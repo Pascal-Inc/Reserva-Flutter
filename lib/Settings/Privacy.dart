@@ -55,10 +55,14 @@ class _PrivacyClassState extends State<PrivacyClass> {
                 leading: Icon(Icons.home),
                 title: Text('Home'),
                 onTap: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => TabBarClass()));
+                  /*Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => TabBarClass()),
-                  );
+                  );*/
                 }),
             ListTile(
                 leading: Icon(Icons.account_circle),

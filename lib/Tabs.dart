@@ -10,6 +10,8 @@ class _TabBarClassState extends State<TabBarClass> {
   Icon customIcon = Icon(Icons.search);
   Widget customSearchBar = Text("Reserva");
 
+  List<String> randomSnackBarWords = [''];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
