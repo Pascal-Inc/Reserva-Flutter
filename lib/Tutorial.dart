@@ -1,10 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 import 'package:reserva_flutter/Welcome.dart';
 
 void main() => runApp(new MaterialApp(
-      theme:
-          ThemeData(primaryColor: Colors.red, accentColor: Colors.yellowAccent),
+      theme: ThemeData(
+          primaryColor: Colors.redAccent, accentColor: Colors.yellowAccent),
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
     ));
@@ -15,6 +17,11 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  void initState() {
+    super.initState();
+    Timer(Duration(seconds: 5), () => print("Splash Done"));
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -22,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
         fit: StackFit.expand,
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(color: Colors.blueAccent),
+            decoration: BoxDecoration(color: Colors.lightBlueAccent),
           ),
           Column(
             children: <Widget>[
@@ -43,7 +50,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                       Padding(padding: EdgeInsets.only(top: 10.0)),
                       Text(
-                        "flutKart",
+                        "Reserva",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 24.0,
@@ -53,7 +60,24 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                 ),
               ),
-              Expanded(child: null)
+              Expanded(
+                flex: 1,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    CircularProgressIndicator(),
+                    Padding(
+                      padding: EdgeInsets.only(top: 20.0),
+                    ),
+                    Text("Online store /n For Everyone",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                        )),
+                  ],
+                ),
+              )
             ],
           )
         ],
