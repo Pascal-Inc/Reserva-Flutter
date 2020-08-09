@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter/semantics.dart';
-import 'package:reserva_flutter/Welcome.dart';
+import 'package:reserva_flutter/Tabs.dart';
 
 void main() => runApp(new MaterialApp(
       theme: ThemeData(
@@ -18,7 +17,13 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 5), () => print("Splash Done"));
+    Timer(
+        Duration(seconds: 5),
+        () => Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (BuildContext context) =>
+                    TabBarClass()))); //print("Splash Done"));
   }
 
   @override
@@ -41,11 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       CircleAvatar(
                         backgroundColor: Colors.white,
                         radius: 50.0,
-                        child: Icon(
-                          Icons.shopping_cart,
-                          color: Colors.greenAccent,
-                          size: 50.0,
-                        ),
+                        child: FlutterLogo(size: 50.0),
                       ),
                       Padding(padding: EdgeInsets.only(top: 10.0)),
                       Text(
@@ -68,7 +69,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     Padding(
                       padding: EdgeInsets.only(top: 20.0),
                     ),
-                    Text("Online store /n For Everyone",
+                    Text("Event Scheduling - Improved",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 18.0,
