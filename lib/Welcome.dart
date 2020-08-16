@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reserva_flutter/Settings/Account.dart';
 import 'package:reserva_flutter/Tutorial.dart';
+import 'package:reserva_flutter/Use%20Camera.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,8 +34,8 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         home: Scaffold(
-            //   appBar: AppBar(title: Text('Random')),
-            body: SplashScreen() //TabBarClass(),
+            // appBar: AppBar(title: Text('Random')),
+            body: /* TakePictureScreenState()*/ SplashScreen() //TabBarClass(),
             ) /* HomePage()*/ // TabBarClass() // MyHomePage(title: 'Reserva Flutter Home Page'),
         );
   }
