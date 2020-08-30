@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reserva_flutter/Settings/Account.dart';
 import 'package:reserva_flutter/Tutorial.dart';
-import 'package:reserva_flutter/Use%20Camera.dart';
 
 void main() {
   runApp(MyApp());
