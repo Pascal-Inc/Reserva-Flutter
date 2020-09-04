@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reserva_flutter/About%20Us.dart';
 import 'package:reserva_flutter/Settings/Account.dart';
 import 'package:reserva_flutter/Tutorial.dart';
 
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         ),
         home: Scaffold(
             // appBar: AppBar(title: Text('Random')),
-            body: /* TakePictureScreenState()*/ SplashScreen() //TabBarClass(),
+            body: /* TakePictureScreenState()*/ AboutUs() //TabBarClass(),
             ) /* HomePage()*/ // TabBarClass() // MyHomePage(title: 'Reserva Flutter Home Page'),
         );
   }

@@ -1,20 +1,21 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:reserva_flutter/About%20Us.dart';
 import 'package:reserva_flutter/Tabs.dart';
 
 void main() => runApp(new MaterialApp(
       theme: ThemeData(
           primaryColor: Colors.redAccent, accentColor: Colors.yellowAccent),
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: Tutorial(),
     ));
 
-class SplashScreen extends StatefulWidget {
+class Tutorial extends StatefulWidget {
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  _TutorialState createState() => _TutorialState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _TutorialState extends State<Tutorial> {
   void initState() {
     super.initState();
     Timer(
@@ -23,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
             context,
             MaterialPageRoute(
                 builder: (BuildContext context) =>
-                    TabBarClass()))); //print("Splash Done"));
+                    AboutUs()))); //print("Splash Done"));
   }
 
   @override
