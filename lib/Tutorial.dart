@@ -19,12 +19,13 @@ class _TutorialState extends State<Tutorial> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 5),
+        Duration(seconds: 20),
         () => Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-                builder: (BuildContext context) =>
-                    AboutUs()))); //print("Splash Done"));
+                builder: (BuildContext context) => AboutUs() //TabBarClass()
+                )));
+    // AboutUs()))); //print("Splash Done"));
   }
 
   @override
@@ -38,6 +39,13 @@ class _TutorialState extends State<Tutorial> {
           ),
           Column(
             children: <Widget>[
+              RaisedButton(child: Text("Rock & Roll"),
+                onPressed: navigation.push,
+                color: Colors.red,
+                textColor: Colors.yellow,
+                padding: EdgeInsets.fromWindowPadding(10, 10),
+                splashColor: Colors.grey,
+              )
               Expanded(
                 flex: 2,
                 child: Container(
