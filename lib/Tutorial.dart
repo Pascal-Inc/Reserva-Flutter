@@ -16,17 +16,17 @@ class Tutorial extends StatefulWidget {
 }
 
 class _TutorialState extends State<Tutorial> {
-  void initState() {
-    super.initState();
-    Timer(
-        Duration(seconds: 20),
-        () => Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (BuildContext context) => AboutUs() //TabBarClass()
-                )));
-    // AboutUs()))); //print("Splash Done"));
-  }
+  // void initState() {
+  //   super.initState();
+  //   Timer(
+  //       Duration(seconds: 20),
+  //       () => Navigator.pushReplacement(
+  //           context,
+  //           MaterialPageRoute(
+  //               builder: (BuildContext context) => AboutUs() //TabBarClass()
+  //               )));
+  //   // AboutUs()))); //print("Splash Done"));
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -39,13 +39,18 @@ class _TutorialState extends State<Tutorial> {
           ),
           Column(
             children: <Widget>[
-              RaisedButton(child: Text("Rock & Roll"),
-                onPressed: navigation.push,
-                color: Colors.red,
-                textColor: Colors.yellow,
-                padding: EdgeInsets.fromWindowPadding(10, 10),
-                splashColor: Colors.grey,
-              )
+              FlatButton(
+                child: Text("next"),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AboutUs()),
+                  );
+                },
+                color: Colors.lightBlueAccent,
+                textColor: Colors.white,
+                padding: EdgeInsets.all(15.0),
+              ),
               Expanded(
                 flex: 2,
                 child: Container(
