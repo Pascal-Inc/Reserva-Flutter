@@ -14,14 +14,21 @@ class AboutUs extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.black, fontStyle: FontStyle.normal)),
                 SizedBox(height: 20, width: 20),
-                Container(
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                        "Lorem Ipson Lorem Ipson Lorem Ipson Lorem Ipson Lorem Ipson Lorem Ipson ",
-                        style: TextStyle(
-                            color: Colors.black, fontStyle: FontStyle.normal),
-                        overflow: TextOverflow.clip,
-                        softWrap: true))
+                Row(
+                  children: [
+                    Text("Lorem Ipsum")
+                    ],
+                  // children: [
+                  //   Flexible(
+                  //     child: Text(
+                  //       'Add long text here',
+                  //       maxLines: 1,
+                  //       softWrap: false,
+                  //       overflow: TextOverflow.ellipsis,
+                  //     ),
+                  //   ),
+                  // ],
+                )
               ])
         ]));
   }

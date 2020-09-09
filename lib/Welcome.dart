@@ -35,7 +35,8 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         home: Scaffold(
-            body: Tutorial() //AboutUs() // // AboutUs() //TabBarClass()
+            body:
+                AboutUs() //Tutorial() //AboutUs() // // AboutUs() //TabBarClass()
             // appBar: AppBar(title: Text('Random')),
             // body: /* TakePictureScreenState()*/ AboutUs() ,
             ) /* HomePage()*/ // TabBarClass() // MyHomePage(title: 'Reserva Flutter Home Page'),
