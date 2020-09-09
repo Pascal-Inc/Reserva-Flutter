@@ -40,17 +40,15 @@ class _TutorialState extends State<Tutorial> {
           Column(
             children: <Widget>[
               FlatButton(
-                child: Text("next"),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => AboutUs()),
-                  );
-                },
-                color: Colors.lightBlueAccent,
-                textColor: Colors.white,
-                padding: EdgeInsets.all(15.0),
-              ),
+                  child: Text("next"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AboutUs()),
+                    );
+                  },
+                  color: Colors.lightBlueAccent,
+                  textColor: Colors.white),
               Expanded(
                 flex: 2,
                 child: Container(
