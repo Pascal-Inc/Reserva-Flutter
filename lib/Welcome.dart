@@ -34,7 +34,8 @@ class MyApp extends StatelessWidget {
           // closer together (more dense) than on mobile platforms.
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: Scaffold(body: AboutUs() //Tutorial() // AboutUs() //TabBarClass()
+        home: Scaffold(
+            body: Tutorial() //AboutUs() // // AboutUs() //TabBarClass()
             // appBar: AppBar(title: Text('Random')),
             // body: /* TakePictureScreenState()*/ AboutUs() ,
             ) /* HomePage()*/ // TabBarClass() // MyHomePage(title: 'Reserva Flutter Home Page'),
