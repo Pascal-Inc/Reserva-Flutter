@@ -39,37 +39,38 @@ class _TutorialState extends State<Tutorial> {
           ),
           Column(
             children: <Widget>[
-              FlatButton(
-                  child: Text("next"),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => AboutUs()),
-                    );
-                  },
-                  color: Colors.lightBlueAccent,
-                  textColor: Colors.white),
-              Expanded(
-                flex: 2,
-                child: Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      CircleAvatar(
-                        backgroundColor: Colors.white,
-                        radius: 50.0,
-                        child: FlutterLogo(size: 50.0),
-                      ),
-                      Padding(padding: EdgeInsets.only(top: 10.0)),
-                      Text(
-                        "Reserva",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24.0,
-                            fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
+              SizedBox(width: 50, height: 20),
+              CloseButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AboutUs()),
+                  );
+                },
+                color: Colors.white,
+              ),
+              SizedBox(
+                width: 200,
+                height: 200,
+              ),
+              Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 50.0,
+                      child: FlutterLogo(size: 50.0),
+                    ),
+                    Padding(padding: EdgeInsets.only(top: 10.0)),
+                    Text(
+                      "Reserva",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
                 ),
               ),
               Expanded(
