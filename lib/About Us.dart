@@ -15,9 +15,7 @@ class AboutUs extends StatelessWidget {
                         color: Colors.black, fontStyle: FontStyle.normal)),
                 SizedBox(height: 20, width: 20),
                 Row(
-                  children: [
-                    Text("Lorem Ipsum")
-                    ],
+                  children: [Text("Lorem Ipsum")],
                   // children: [
                   //   Flexible(
                   //     child: Text(
