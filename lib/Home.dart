@@ -7,7 +7,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Icon customIcon = Icon(Icons.search);
-  Widget customSearchBar = Text("AppBar");
+  Widget customSearchBar = Text("Reserva");
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
                   );
                 } else {
                   this.customIcon = Icon(Icons.search);
-                  this.customSearchBar = Text("AppBar");
+                  this.customSearchBar = Text("Reserva");
                 }
               });
             },

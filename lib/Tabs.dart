@@ -15,9 +15,7 @@ class _TabBarClassState extends State<TabBarClass> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData(
-          primarySwatch: Colors.green,
-        ),
+        theme: ThemeData(primarySwatch: Colors.green, fontFamily: "Futura"),
         debugShowCheckedModeBanner: false,
         home: DefaultTabController(
             length: 2,
@@ -51,7 +49,7 @@ class _TabBarClassState extends State<TabBarClass> {
                             );
                           } else {
                             this.customIcon = Icon(Icons.search);
-                            this.customSearchBar = Text("AppBar");
+                            this.customSearchBar = Text("Reserva");
                           }
                         });
                       })

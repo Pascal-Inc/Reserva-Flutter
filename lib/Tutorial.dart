@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:reserva_flutter/About%20Us.dart';
+import 'package:reserva_flutter/Home.dart';
 import 'package:reserva_flutter/Tabs.dart';
 
 void main() => runApp(new MaterialApp(
@@ -35,19 +36,27 @@ class _TutorialState extends State<Tutorial> {
         fit: StackFit.expand,
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(color: Colors.lightBlueAccent),
+            decoration: BoxDecoration(
+              color: Colors.green,
+            ),
           ),
           Column(
             children: <Widget>[
-              SizedBox(width: 50, height: 20),
-              CloseButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => AboutUs()),
-                  );
-                },
-                color: Colors.white,
+              SizedBox(width: 50, height: 40),
+              Align(
+                alignment: Alignment.topRight,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CloseButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => TabBarClass()),
+                      );
+                    },
+                    color: Colors.white,
+                  ),
+                ),
               ),
               SizedBox(
                 width: 200,
@@ -78,7 +87,6 @@ class _TutorialState extends State<Tutorial> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    CircularProgressIndicator(),
                     Padding(
                       padding: EdgeInsets.only(top: 20.0),
                     ),
