@@ -4,31 +4,32 @@ class AboutUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("About Our Company")),
-        body: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Pascal Inc.",
-                    style: TextStyle(
-                        color: Colors.black, fontStyle: FontStyle.normal)),
-                SizedBox(height: 20, width: 20),
-                Row(
-                  children: [Text("Lorem Ipsum")],
-                  // children: [
-                  //   Flexible(
-                  //     child: Text(
-                  //       'Add long text here',
-                  //       maxLines: 1,
-                  //       softWrap: false,
-                  //       overflow: TextOverflow.ellipsis,
-                  //     ),
-                  //   ),
-                  // ],
-                )
-              ])
-        ]));
+      appBar: AppBar(title: Text("About Us")),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          FlutterLogo(
+            size: 200,
+          ),
+          SizedBox(height: 30),
+          Text(
+            "Pascal Inc.",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Flexible(
+              child: Text(
+                'Your Text Your Text Your Text Your Text Your Text Your Text Your Text Your Text Your Text Your Text',
+                textAlign: TextAlign.center,
+                softWrap: true,
+                // overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 // Positioned(
