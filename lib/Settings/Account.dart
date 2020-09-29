@@ -4,6 +4,7 @@ import 'package:reserva_flutter/Settings/Notifications.dart';
 import 'package:reserva_flutter/Settings/Privacy.dart';
 import 'package:reserva_flutter/Settings/Security.dart';
 import 'package:reserva_flutter/Tabs.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AccountClass extends StatefulWidget {
   @override
@@ -112,12 +113,22 @@ class _AccountClassState extends State<AccountClass> {
       body: RaisedButton(
         child: Text('Home'),
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => TabBarClass()),
-          );
+          // Navigator.push(
+          //   context,
+          //   MaterialPageRoute(builder: (context) => TabBarClass()),
+          // );
+          _launchURL();
         },
       ),
     );
+  }
+}
+
+_launchURL() async {
+  const url = 'https://sstinc.org';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "937511972512",
+    "firebase_url": "https://reserva-7952f.firebaseio.com",
+    "project_id": "reserva-7952f",
+    "storage_bucket": "reserva-7952f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937511972512:android:492b43a7be2af3ac2463c5",
+        "android_client_info": {
+          "package_name": "com.pascalinc.reserva_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937511972512-ifh64popglkvi0r7kl9bd7vo5k2rk3pr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXLwHR4hwyn7p-Jg2AfOllMhzPAxGDxx0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937511972512-ifh64popglkvi0r7kl9bd7vo5k2rk3pr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "937511972512-eo7k2f5rrf7i818jp7r2cdkqpmat3bja.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.pascalinc.Reserva-iOS"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
