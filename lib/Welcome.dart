@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:reserva_flutter/Calendar.dart';
 import 'package:reserva_flutter/Tutorial.dart';
 import 'package:reserva_flutter/Tabs.dart';
 import 'package:reserva_flutter/Map.dart';
 import 'package:english_words/english_words.dart' as english_words;
 
 void main() {
-  runApp(MapThing());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
           // closer together (more dense) than on mobile platforms.
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: Scaffold(body: AppBarSearchExample()));
+        home: Scaffold(body: CalenarThing() /*AppBarSearchExample()*/));
   }
 }
 
