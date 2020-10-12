@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:reserva_flutter/About%20Us.dart';
-import 'package:reserva_flutter/Settings/Account.dart';
-import 'package:reserva_flutter/Tabs.dart';
+import 'package:reserva_flutter/Calendar.dart';
+import 'package:reserva_flutter/Event%20Details.dart';
+import 'package:reserva_flutter/Tabs/Stuff.dart';
 import 'package:reserva_flutter/Tutorial.dart';
+import 'package:reserva_flutter/Tabs.dart';
+import 'package:reserva_flutter/Map.dart';
+import 'package:english_words/english_words.dart' as english_words;
 
 void main() {
   runApp(MyApp());
@@ -32,7 +35,7 @@ class MyApp extends StatelessWidget {
           // closer together (more dense) than on mobile platforms.
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: Scaffold(body: Tutorial()));
+        home: Tutorial() /*CalenarThing()*/ /*AppBarSearchExample()*/);
   }
 }
 
