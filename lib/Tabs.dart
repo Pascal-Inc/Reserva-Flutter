@@ -72,7 +72,7 @@ class _MySearchDelegate extends SearchDelegate<String> {
 
   _MySearchDelegate(List<String> words)
       : _words = words,
-        _history = <String>/*['apple', 'hello', 'world', 'flutter']*/,
+        _history = <String>[] /*['apple', 'hello', 'world', 'flutter']*/,
         super();
 
   // Leading icon in search bar.
@@ -812,7 +812,7 @@ class _TabBarClassState extends State<TabBarClass> {
                 //                           Icon(Icons.account_circle)
                 //                           */
                 // ],
-              ] ),
+              ]),
             )));
   }
 }
