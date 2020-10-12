@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:reserva_flutter/About%20Us.dart';
 import 'package:reserva_flutter/Settings/Account.dart';
 import 'package:reserva_flutter/Settings/Help.dart';
 import 'package:reserva_flutter/Settings/Notifications.dart';
@@ -91,7 +92,7 @@ class DrawerThing extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HelpClass()),
+                  MaterialPageRoute(builder: (context) => AboutUs()),
                 );
               }),
           ListTile(
@@ -155,7 +156,7 @@ showAlertDialog(BuildContext context) {
   // set up the AlertDialog
   AlertDialog alert = AlertDialog(
     title: Text("Log Out"),
-    content: Text("Do you really want to Log Out"),
+    content: Text("Are you sure you want to Log Out?"),
     actions: [
       cancelButton,
       continueButton,

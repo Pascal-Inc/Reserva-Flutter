@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reserva_flutter/Calendar.dart';
+import 'package:reserva_flutter/Event%20Details.dart';
+import 'package:reserva_flutter/Tabs/Stuff.dart';
 import 'package:reserva_flutter/Tutorial.dart';
 import 'package:reserva_flutter/Tabs.dart';
 import 'package:reserva_flutter/Map.dart';
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
           // closer together (more dense) than on mobile platforms.
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: Scaffold(body: CalenarThing() /*AppBarSearchExample()*/));
+        home: Tutorial() /*CalenarThing()*/ /*AppBarSearchExample()*/);
   }
 }
 

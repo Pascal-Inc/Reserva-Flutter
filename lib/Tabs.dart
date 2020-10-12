@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:reserva_flutter/Event%20Details.dart';
 import 'package:reserva_flutter/Styles.dart';
 import 'package:english_words/english_words.dart' as english_words;
-
-class TabBarClass extends StatefulWidget {
-  @override
-  _TabBarClassState createState() => _TabBarClassState();
-}
+import 'package:reserva_flutter/Tabs/Stuff.dart';
 
 class AppBarSearchExample extends StatefulWidget {
   const AppBarSearchExample({Key key}) : super(key: key);
@@ -75,7 +72,7 @@ class _MySearchDelegate extends SearchDelegate<String> {
 
   _MySearchDelegate(List<String> words)
       : _words = words,
-        _history = <String>['apple', 'hello', 'world', 'flutter'],
+        _history = <String>/*['apple', 'hello', 'world', 'flutter']*/,
         super();
 
   // Leading icon in search bar.
@@ -204,6 +201,11 @@ class _SuggestionList extends StatelessWidget {
   }
 }
 
+class TabBarClass extends StatefulWidget {
+  @override
+  _TabBarClassState createState() => _TabBarClassState();
+}
+
 class _TabBarClassState extends State<TabBarClass> {
   Icon customIcon = Icon(Icons.search);
   Widget customSearchBar = Text("Reserva");
@@ -254,9 +256,8 @@ class _TabBarClassState extends State<TabBarClass> {
                 ],
               ),
               drawer: DrawerThing(),
-              body: TabBarView(
-                children: [
-                  /*
+              body: TabBarView(children: [
+                /*
                                           DataTable(
                                             columns: const <DataColumn>[
                                               DataColumn(
@@ -311,493 +312,507 @@ class _TabBarClassState extends State<TabBarClass> {
                                               ),
                                             ],
                                           ),*/
-                  ListView(
-                    children: <Widget>[
-                      Card(
-                        child: ListTile(
-                          leading: FlutterLogo(size: 72.0),
-                          title: Text('Singapore Food Festival'),
-                          subtitle: Text('Food\n11/7/20 - 20/7/20 (Annually)'),
-                          trailing: Text('4.6'),
-                          /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                          isThreeLine: true,
-                          onTap: () {},
-                        ),
-                      ),
-                      Card(
-                        child: ListTile(
-                          leading: FlutterLogo(size: 72.0),
-                          title: Text('Grand Prix Singapore'),
-                          subtitle: Text('Races\n10/7/20 - 26/7/20 (Annually)'),
-                          // trailing: Icon(Icons.more_vert),
-                          trailing: Text('3.9'),
-                          /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                          isThreeLine: true,
-                          onTap: () {},
-                        ),
-                      ),
-                      Card(
-                        child: ListTile(
-                          leading: FlutterLogo(size: 72.0),
-                          title: Text('Singapore Art Week'),
-                          subtitle: Text(
-                              'Charity and Causes\n15/9/20 - 22/9/20 (Biannually)'),
-                          // trailing: Icon(Icons.more_vert),
-                          trailing: Text('4.2'),
-                          /*
-                          
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                          isThreeLine: true,
-                          onTap: () {},
-                        ),
-                      ),
-                      Card(
-                        child: ListTile(
-                          leading: FlutterLogo(size: 72.0),
-                          title: Text('Masks Sewn With Love'),
-                          subtitle: Text(
-                              'Charity and Causes\nDuring COVID-19 (Weekly)'),
-                          // trailing: Icon(Icons.more_vert),
-                          trailing: Text('5.0'),
-                          /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                          isThreeLine: true,
-                          onTap: () {},
-                        ),
-                      ),
-                      // ),
-                      /*
-                                              Card(child: ListTile(title: Text('One-line ListTile'))),
-                                              Card(
-                                                child: ListTile(
-                                                  leading: FlutterLogo(),
-                                                  title: Text('One-line with leading widget'),
-                                                ),
-                                              ),
-                                              Card(
-                                                child: ListTile(
-                                                  title: Text('One-line with trailing widget'),
-                                                  trailing: Icon(Icons.more_vert),
-                                                ),
-                                              ),
-                                              Card(
-                                                child: ListTile(
-                                                  leading: FlutterLogo(),
-                                                  title: Text('One-line with both widgets'),
-                                                  trailing: Icon(Icons.more_vert),
-                                                ),
-                                              ),
-                                              Card(
-                                                child: ListTile(
-                                                  title: Text('One-line dense ListTile'),
-                                                  dense: true,
-                                                ),
-                                              ),
-                                              Card(
-                                                child: ListTile(
-                                                  leading: FlutterLogo(size: 56.0),
-                                                  title: Text('Two-line ListTile'),
-                                                  subtitle: Text('Here is a second line'),
-                                                  trailing: Icon(Icons.more_vert),
-                                                ),
-                                              ),
-                                              Card(
-                                                child: ListTile(
-                                                  leading: FlutterLogo(size: 72.0),
-                                                  title: Text('Three-line ListTile'),
-                                                  subtitle: Text(
-                                                      'A sufficiently long subtitle warrants three lines.'),
-                                                  trailing: Icon(Icons.more_vert),
-                                                  isThreeLine: true,
-                                                ),
-                                              ),*/
-                    ],
+                TodosScreen(
+                    todos: List.generate(
+                  1000,
+                  (i) => Todo(
+                    'Event ${i + 1}',
+                    'A description of what needs to be done for Event ${i + 1}',
                   ),
-                  ListView(children: <Widget>[
-                    Card(
-                      child: ListTile(
-                        leading: FlutterLogo(size: 72.0),
-                        title: Text('Lorem Ipsum'),
-                        subtitle: Text('Category\nTime Period (Frequency)'),
-                        trailing: Text('0.0'),
-                        /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                        isThreeLine: true,
-                        onTap: () {},
-                      ),
-                    ),
-                    Card(
-                      child: ListTile(
-                        leading: FlutterLogo(size: 72.0),
-                        title: Text('Lorem Ipsum'),
-                        subtitle: Text('Category\nTime Period (Frequency)'),
-                        trailing: Text('0.0'),
-                        /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                        isThreeLine: true,
-                        onTap: () {},
-                      ),
-                    ),
-                    Card(
-                      child: ListTile(
-                        leading: FlutterLogo(size: 72.0),
-                        title: Text('Lorem Ipsum'),
-                        subtitle: Text('Category\nTime Period (Frequency)'),
-                        trailing: Text('0.0'),
-                        /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                        isThreeLine: true,
-                        onTap: () {},
-                      ),
-                    ),
-                    Card(
-                      child: ListTile(
-                        leading: FlutterLogo(size: 72.0),
-                        title: Text('Lorem Ipsum'),
-                        subtitle: Text('Category\nTime Period (Frequency)'),
-                        trailing: Text('0.0'),
-                        /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                        isThreeLine: true,
-                        onTap: () {},
-                      ),
-                    ),
-                    Card(
-                      child: ListTile(
-                        leading: FlutterLogo(size: 72.0),
-                        title: Text('Lorem Ipsum'),
-                        subtitle: Text('Category\nTime Period (Frequency)'),
-                        trailing: Text('0.0'),
-                        /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                        isThreeLine: true,
-                        onTap: () {},
-                      ),
-                    ),
-                    Card(
-                      child: ListTile(
-                        leading: FlutterLogo(size: 72.0),
-                        title: Text('Lorem Ipsum'),
-                        subtitle: Text('Category\nTime Period (Frequency)'),
-                        trailing: Text('0.0'),
-                        /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                        isThreeLine: true,
-                        onTap: () {},
-                      ),
-                    ),
-                    Card(
-                      child: ListTile(
-                        leading: FlutterLogo(size: 72.0),
-                        title: Text('Lorem Ipsum'),
-                        subtitle: Text('Category\nTime Period (Frequency)'),
-                        trailing: Text('0.0'),
-                        /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                        isThreeLine: true,
-                        onTap: () {},
-                      ),
-                    ),
-                    Card(
-                      child: ListTile(
-                        leading: FlutterLogo(size: 72.0),
-                        title: Text('Lorem Ipsum'),
-                        subtitle: Text('Category\nTime Period (Frequency)'),
-                        trailing: Text('0.0'),
-                        /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                        isThreeLine: true,
-                        onTap: () {},
-                      ),
-                    ),
-                    Card(
-                      child: ListTile(
-                        leading: FlutterLogo(size: 72.0),
-                        title: Text('Lorem Ipsum'),
-                        subtitle: Text('Category\nTime Period (Frequency)'),
-                        trailing: Text('0.0'),
-                        /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                        isThreeLine: true,
-                        onTap: () {},
-                      ),
-                    ),
-                    Card(
-                      child: ListTile(
-                        leading: FlutterLogo(size: 72.0),
-                        title: Text('Lorem Ipsum'),
-                        subtitle: Text('Category\nTime Period (Frequency)'),
-                        trailing: Text('0.0'),
-                        /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                        isThreeLine: true,
-                        onTap: () {},
-                      ),
-                    ),
-                    Card(
-                      child: ListTile(
-                        leading: FlutterLogo(size: 72.0),
-                        title: Text('Lorem Ipsum'),
-                        subtitle: Text('Category\nTime Period (Frequency)'),
-                        trailing: Text('0.0'),
-                        /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                        isThreeLine: true,
-                        onTap: () {},
-                      ),
-                    ),
-                    Card(
-                      child: ListTile(
-                        leading: FlutterLogo(size: 72.0),
-                        title: Text('Lorem Ipsum'),
-                        subtitle: Text('Category\nTime Period (Frequency)'),
-                        trailing: Text('0.0'),
-                        /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                        isThreeLine: true,
-                        onTap: () {},
-                      ),
-                    ),
-                    Card(
-                      child: ListTile(
-                        leading: FlutterLogo(size: 72.0),
-                        title: Text('Lorem Ipsum'),
-                        subtitle: Text('Category\nTime Period (Frequency)'),
-                        trailing: Text('0.0'),
-                        /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                        isThreeLine: true,
-                        onTap: () {},
-                      ),
-                    ),
-                    Card(
-                      child: ListTile(
-                        leading: FlutterLogo(size: 72.0),
-                        title: Text('Lorem Ipsum'),
-                        subtitle: Text('Category\nTime Period (Frequency)'),
-                        trailing: Text('0.0'),
-                        /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                        isThreeLine: true,
-                        onTap: () {},
-                      ),
-                    ),
-                    Card(
-                      child: ListTile(
-                        leading: FlutterLogo(size: 72.0),
-                        title: Text('Lorem Ipsum'),
-                        subtitle: Text('Category\nTime Period (Frequency)'),
-                        trailing: Text('0.0'),
-                        /*
-                                                  Row(
-                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                    children: <Widget>[
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.yellow[600],
-                                                      ),
-                                                      Text('3.9')
-                                                    ],
-                                                  ),
-                                                  */
-                        isThreeLine: true,
-                        onTap: () {},
-                      ),
-                    ),
-                  ])
-                  // Text("All Events"),
-                  // Text("Search"),
-                  // Text("Settings")
-                  /*
-                                          Icon(Icons.calendar_today),
-                                          Icon(Icons.event),
-                                          Icon(Icons.search),
-                                          Icon(Icons.account_circle)
-                                          */
-                ],
-              ),
+                )),
+                // ListView(
+                //   children: <Widget>[
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Singapore Food Festival'),
+                //         subtitle: Text('Food\n11/7/20 - 20/7/20 (Annually)'),
+                //         trailing: Text('4.6'),
+                //         /*
+                //                                 Row(
+                //                                   crossAxisAlignment: CrossAxisAlignment.center,
+                //                                   children: <Widget>[
+                //                                     Icon(
+                //                                       Icons.star,
+                //                                       color: Colors.yellow[600],
+                //                                     ),
+                //                                     Text('3.9')
+                //                                   ],
+                //                                 ),
+                //                                 */
+                //         isThreeLine: true,
+                //         onTap: () {
+                //           Navigator.push(
+                //               context,
+                //               MaterialPageRoute(
+                //                   builder: (context) => EventDetailPage()));
+                //         },
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Grand Prix Singapore'),
+                //         subtitle: Text('Races\n10/7/20 - 26/7/20 (Annually)'),
+                //         // trailing: Icon(Icons.more_vert),
+                //         trailing: Text('3.9'),
+                //         /*
+                //                                 Row(
+                //                                   crossAxisAlignment: CrossAxisAlignment.center,
+                //                                   children: <Widget>[
+                //                                     Icon(
+                //                                       Icons.star,
+                //                                       color: Colors.yellow[600],
+                //                                     ),
+                //                                     Text('3.9')
+                //                                   ],
+                //                                 ),
+                //                                 */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Singapore Art Week'),
+                //         subtitle: Text(
+                //             'Charity and Causes\n15/9/20 - 22/9/20 (Biannually)'),
+                //         // trailing: Icon(Icons.more_vert),
+                //         trailing: Text('4.2'),
+                //         /*
+
+                //                                 Row(
+                //                                   crossAxisAlignment: CrossAxisAlignment.center,
+                //                                   children: <Widget>[
+                //                                     Icon(
+                //                                       Icons.star,
+                //                                       color: Colors.yellow[600],
+                //                                     ),
+                //                                     Text('3.9')
+                //                                   ],
+                //                                 ),
+                //                                 */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Masks Sewn With Love'),
+                //         subtitle: Text(
+                //             'Charity and Causes\nDuring COVID-19 (Weekly)'),
+                //         // trailing: Icon(Icons.more_vert),
+                //         trailing: Text('5.0'),
+                //         /*
+                //                                 Row(
+                //                                   crossAxisAlignment: CrossAxisAlignment.center,
+                //                                   children: <Widget>[
+                //                                     Icon(
+                //                                       Icons.star,
+                //                                       color: Colors.yellow[600],
+                //                                     ),
+                //                                     Text('3.9')
+                //                                   ],
+                //                                 ),
+                //                                 */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     // ),
+                //     /*
+                //                             Card(child: ListTile(title: Text('One-line ListTile'))),
+                //                             Card(
+                //                               child: ListTile(
+                //                                 leading: FlutterLogo(),
+                //                                 title: Text('One-line with leading widget'),
+                //                               ),
+                //                             ),
+                //                             Card(
+                //                               child: ListTile(
+                //                                 title: Text('One-line with trailing widget'),
+                //                                 trailing: Icon(Icons.more_vert),
+                //                               ),
+                //                             ),
+                //                             Card(
+                //                               child: ListTile(
+                //                                 leading: FlutterLogo(),
+                //                                 title: Text('One-line with both widgets'),
+                //                                 trailing: Icon(Icons.more_vert),
+                //                               ),
+                //                             ),
+                //                             Card(
+                //                               child: ListTile(
+                //                                 title: Text('One-line dense ListTile'),
+                //                                 dense: true,
+                //                               ),
+                //                             ),
+                //                             Card(
+                //                               child: ListTile(
+                //                                 leading: FlutterLogo(size: 56.0),
+                //                                 title: Text('Two-line ListTile'),
+                //                                 subtitle: Text('Here is a second line'),
+                //                                 trailing: Icon(Icons.more_vert),
+                //                               ),
+                //                             ),
+                //                             Card(
+                //                               child: ListTile(
+                //                                 leading: FlutterLogo(size: 72.0),
+                //                                 title: Text('Three-line ListTile'),
+                //                                 subtitle: Text(
+                //                                     'A sufficiently long subtitle warrants three lines.'),
+                //                                 trailing: Icon(Icons.more_vert),
+                //                                 isThreeLine: true,
+                //                               ),
+                //                             ),*/
+                //   ],
+                // ),
+                AppBarSearchExample()
+                //   ListView(children: <Widget>[
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Lorem Ipsum'),
+                //         subtitle: Text('Category\nTime Period (Frequency)'),
+                //         trailing: Text('0.0'),
+                //         /*
+                //                                   Row(
+                //                                     crossAxisAlignment: CrossAxisAlignment.center,
+                //                                     children: <Widget>[
+                //                                       Icon(
+                //                                         Icons.star,
+                //                                         color: Colors.yellow[600],
+                //                                       ),
+                //                                       Text('3.9')
+                //                                     ],
+                //                                   ),
+                //                                   */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Lorem Ipsum'),
+                //         subtitle: Text('Category\nTime Period (Frequency)'),
+                //         trailing: Text('0.0'),
+                //         /*
+                //                                   Row(
+                //                                     crossAxisAlignment: CrossAxisAlignment.center,
+                //                                     children: <Widget>[
+                //                                       Icon(
+                //                                         Icons.star,
+                //                                         color: Colors.yellow[600],
+                //                                       ),
+                //                                       Text('3.9')
+                //                                     ],
+                //                                   ),
+                //                                   */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Lorem Ipsum'),
+                //         subtitle: Text('Category\nTime Period (Frequency)'),
+                //         trailing: Text('0.0'),
+                //         /*
+                //                                   Row(
+                //                                     crossAxisAlignment: CrossAxisAlignment.center,
+                //                                     children: <Widget>[
+                //                                       Icon(
+                //                                         Icons.star,
+                //                                         color: Colors.yellow[600],
+                //                                       ),
+                //                                       Text('3.9')
+                //                                     ],
+                //                                   ),
+                //                                   */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Lorem Ipsum'),
+                //         subtitle: Text('Category\nTime Period (Frequency)'),
+                //         trailing: Text('0.0'),
+                //         /*
+                //                                   Row(
+                //                                     crossAxisAlignment: CrossAxisAlignment.center,
+                //                                     children: <Widget>[
+                //                                       Icon(
+                //                                         Icons.star,
+                //                                         color: Colors.yellow[600],
+                //                                       ),
+                //                                       Text('3.9')
+                //                                     ],
+                //                                   ),
+                //                                   */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Lorem Ipsum'),
+                //         subtitle: Text('Category\nTime Period (Frequency)'),
+                //         trailing: Text('0.0'),
+                //         /*
+                //                                   Row(
+                //                                     crossAxisAlignment: CrossAxisAlignment.center,
+                //                                     children: <Widget>[
+                //                                       Icon(
+                //                                         Icons.star,
+                //                                         color: Colors.yellow[600],
+                //                                       ),
+                //                                       Text('3.9')
+                //                                     ],
+                //                                   ),
+                //                                   */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Lorem Ipsum'),
+                //         subtitle: Text('Category\nTime Period (Frequency)'),
+                //         trailing: Text('0.0'),
+                //         /*
+                //                                   Row(
+                //                                     crossAxisAlignment: CrossAxisAlignment.center,
+                //                                     children: <Widget>[
+                //                                       Icon(
+                //                                         Icons.star,
+                //                                         color: Colors.yellow[600],
+                //                                       ),
+                //                                       Text('3.9')
+                //                                     ],
+                //                                   ),
+                //                                   */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Lorem Ipsum'),
+                //         subtitle: Text('Category\nTime Period (Frequency)'),
+                //         trailing: Text('0.0'),
+                //         /*
+                //                                   Row(
+                //                                     crossAxisAlignment: CrossAxisAlignment.center,
+                //                                     children: <Widget>[
+                //                                       Icon(
+                //                                         Icons.star,
+                //                                         color: Colors.yellow[600],
+                //                                       ),
+                //                                       Text('3.9')
+                //                                     ],
+                //                                   ),
+                //                                   */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Lorem Ipsum'),
+                //         subtitle: Text('Category\nTime Period (Frequency)'),
+                //         trailing: Text('0.0'),
+                //         /*
+                //                                   Row(
+                //                                     crossAxisAlignment: CrossAxisAlignment.center,
+                //                                     children: <Widget>[
+                //                                       Icon(
+                //                                         Icons.star,
+                //                                         color: Colors.yellow[600],
+                //                                       ),
+                //                                       Text('3.9')
+                //                                     ],
+                //                                   ),
+                //                                   */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Lorem Ipsum'),
+                //         subtitle: Text('Category\nTime Period (Frequency)'),
+                //         trailing: Text('0.0'),
+                //         /*
+                //                                   Row(
+                //                                     crossAxisAlignment: CrossAxisAlignment.center,
+                //                                     children: <Widget>[
+                //                                       Icon(
+                //                                         Icons.star,
+                //                                         color: Colors.yellow[600],
+                //                                       ),
+                //                                       Text('3.9')
+                //                                     ],
+                //                                   ),
+                //                                   */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Lorem Ipsum'),
+                //         subtitle: Text('Category\nTime Period (Frequency)'),
+                //         trailing: Text('0.0'),
+                //         /*
+                //                                   Row(
+                //                                     crossAxisAlignment: CrossAxisAlignment.center,
+                //                                     children: <Widget>[
+                //                                       Icon(
+                //                                         Icons.star,
+                //                                         color: Colors.yellow[600],
+                //                                       ),
+                //                                       Text('3.9')
+                //                                     ],
+                //                                   ),
+                //                                   */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Lorem Ipsum'),
+                //         subtitle: Text('Category\nTime Period (Frequency)'),
+                //         trailing: Text('0.0'),
+                //         /*
+                //                                   Row(
+                //                                     crossAxisAlignment: CrossAxisAlignment.center,
+                //                                     children: <Widget>[
+                //                                       Icon(
+                //                                         Icons.star,
+                //                                         color: Colors.yellow[600],
+                //                                       ),
+                //                                       Text('3.9')
+                //                                     ],
+                //                                   ),
+                //                                   */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Lorem Ipsum'),
+                //         subtitle: Text('Category\nTime Period (Frequency)'),
+                //         trailing: Text('0.0'),
+                //         /*
+                //                                   Row(
+                //                                     crossAxisAlignment: CrossAxisAlignment.center,
+                //                                     children: <Widget>[
+                //                                       Icon(
+                //                                         Icons.star,
+                //                                         color: Colors.yellow[600],
+                //                                       ),
+                //                                       Text('3.9')
+                //                                     ],
+                //                                   ),
+                //                                   */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Lorem Ipsum'),
+                //         subtitle: Text('Category\nTime Period (Frequency)'),
+                //         trailing: Text('0.0'),
+                //         /*
+                //                                   Row(
+                //                                     crossAxisAlignment: CrossAxisAlignment.center,
+                //                                     children: <Widget>[
+                //                                       Icon(
+                //                                         Icons.star,
+                //                                         color: Colors.yellow[600],
+                //                                       ),
+                //                                       Text('3.9')
+                //                                     ],
+                //                                   ),
+                //                                   */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Lorem Ipsum'),
+                //         subtitle: Text('Category\nTime Period (Frequency)'),
+                //         trailing: Text('0.0'),
+                //         /*
+                //                                   Row(
+                //                                     crossAxisAlignment: CrossAxisAlignment.center,
+                //                                     children: <Widget>[
+                //                                       Icon(
+                //                                         Icons.star,
+                //                                         color: Colors.yellow[600],
+                //                                       ),
+                //                                       Text('3.9')
+                //                                     ],
+                //                                   ),
+                //                                   */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //     Card(
+                //       child: ListTile(
+                //         leading: FlutterLogo(size: 72.0),
+                //         title: Text('Lorem Ipsum'),
+                //         subtitle: Text('Category\nTime Period (Frequency)'),
+                //         trailing: Text('0.0'),
+                //         /*
+                //                                   Row(
+                //                                     crossAxisAlignment: CrossAxisAlignment.center,
+                //                                     children: <Widget>[
+                //                                       Icon(
+                //                                         Icons.star,
+                //                                         color: Colors.yellow[600],
+                //                                       ),
+                //                                       Text('3.9')
+                //                                     ],
+                //                                   ),
+                //                                   */
+                //         isThreeLine: true,
+                //         onTap: () {},
+                //       ),
+                //     ),
+                //   ])
+                //   // Text("All Events"),
+                //   // Text("Search"),
+                //   // Text("Settings")
+                //   /*
+                //                           Icon(Icons.calendar_today),
+                //                           Icon(Icons.event),
+                //                           Icon(Icons.search),
+                //                           Icon(Icons.account_circle)
+                //                           */
+                // ],
+              ] ),
             )));
   }
 }

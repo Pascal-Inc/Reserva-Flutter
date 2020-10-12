@@ -181,7 +181,7 @@ class _CalendarThingState extends State<CalendarThing>
           borderRadius: BorderRadius.circular(16.0),
         ),
       ),
-      onDaySelected: _onDaySelected,
+      //onDaySelected: _onDaySelected,
       onVisibleDaysChanged: _onVisibleDaysChanged,
       onCalendarCreated: _onCalendarCreated,
     );
@@ -270,10 +270,10 @@ class _CalendarThingState extends State<CalendarThing>
           return children;
         },
       ),
-      onDaySelected: (date, events, holidays) {
+      /*onDaySelected: (date, events, holidays) {
         _onDaySelected(date, events, holidays);
         _animationController.forward(from: 0.0);
-      },
+      },*/
       onVisibleDaysChanged: _onVisibleDaysChanged,
       onCalendarCreated: _onCalendarCreated,
     );

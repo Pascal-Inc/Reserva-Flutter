@@ -21,7 +21,8 @@ class _CalenarThingState extends State<CalenarThing> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF333A47),
+      //backgroundColor: Color(0xFF333A47),
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,8 +31,10 @@ class _CalenarThingState extends State<CalenarThing> {
               padding: const EdgeInsets.all(16),
               child: Text(
                 'Reserva Calendar',
-                style: Theme.of(context).textTheme.headline5.copyWith(
-                    color: Colors.blue[200], fontWeight: FontWeight.w500),
+                style: Theme.of(context)
+                    .textTheme
+                    .headline5
+                    .copyWith(color: Colors.green, fontWeight: FontWeight.w500),
               ),
             ),
             CalendarTimeline(
@@ -40,17 +43,17 @@ class _CalenarThingState extends State<CalenarThing> {
                       ? null
                       : DateTime(DateTime.now().year, DateTime.now().month,
                           DateTime.now().day),
-              firstDate: DateTime(DateTime.now().year, DateTime.now().month,
-                  DateTime.now().day),
+              firstDate: DateTime(DateTime.now().year, DateTime.now().month, 1),
               lastDate: DateTime(2100, 1, 1),
               onDateSelected: (date) => print(date),
               leftMargin: 20,
-              monthColor: Colors.white70,
-              dayColor: Colors.greenAccent[200],
+              monthColor: Colors.black87,
+              dayColor: Colors.orange,
               //dayNameColor: Color(0xFF333A47),
-              activeDayColor: Colors.white,
-              activeBackgroundDayColor: Colors.redAccent[100],
-              dotsColor: Color(0xFF333A47),
+              activeDayColor: Colors.black,
+              activeBackgroundDayColor: Colors.redAccent,
+              //dotsColor: Color(0xFF333A47),
+              dotsColor: Colors.white,
               selectableDayPredicate: (date) =>
                   date.weekday != 6 && date.weekday != 7,
             ),

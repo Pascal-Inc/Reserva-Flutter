@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutUs extends StatelessWidget {
   @override
@@ -27,11 +28,32 @@ class AboutUs extends StatelessWidget {
               ),
             ),
           ),
+          RaisedButton(
+              onPressed: () {
+                _launchURL();
+              },
+              child: Text('Contact Us'))
         ],
       ),
     );
   }
 }
+
+_launchURL() async {
+  final Uri params = Uri(
+    scheme: 'mailto',
+    path: 'granwyn_tan@s2019.ssts.edu.sg',
+    query:
+        'subject=Reserva Feedback&body=Dear Pascal Inc,\n\n\nReserva User', //add subject and body here
+  );
+  var url = params.toString();
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 // Positioned(
 //     left: position.dx,
 //     top: position.dy,
