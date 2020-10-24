@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart' as english_words;
 
 class HomePage extends StatefulWidget {
   @override
-  _MySearchState createState() => _HomePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
 class _MySearchDelegate extends SearchDelegate<String> {
@@ -11,7 +12,7 @@ class _MySearchDelegate extends SearchDelegate<String> {
 
   _MySearchDelegate(List<String> words)
       : _words = words,
-        _history = <String>/*['apple', 'hello', 'world', 'flutter']*/,
+        _history = <String>[]/*['apple', 'hello', 'world', 'flutter']*/,
         super();
 
   // Leading icon in search bar.
