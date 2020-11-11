@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:reserva_flutter/About%20Us.dart';
 import 'package:reserva_flutter/Settings/Account.dart';
 import 'package:reserva_flutter/Settings/Help.dart';
 import 'package:reserva_flutter/Settings/Notifications.dart';
@@ -89,14 +92,83 @@ class DrawerThing extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HelpClass()),
+                  MaterialPageRoute(builder: (context) => AboutUs()),
                 );
               }),
           ListTile(
               title: Text("Log Out", style: TextStyle(color: Colors.red)),
-              onTap: () {})
+              onTap: () {
+                showAlertDialog(context);
+              })
         ],
       ),
     );
   }
+}
+
+// alertDialog(BuildContext context) {
+//   // This is the ok button
+//   Widget ok = FlatButton(
+//     child: Text("OK"),
+//     onPressed: () {
+//       Navigator.of(context).pop();
+//     },
+//   );
+//   // show the alert dialog
+//   showDialog(
+//     context: context,
+//     builder: (BuildContext context) {
+//       return AlertDialog(
+//         title: Text("Confirmation"),
+//         content: Text("Are you sure you want to Log Out?"),
+//         actions: [
+//           ok,
+//         ],
+//         elevation: 5,
+//       );
+//     },
+//     /*barrierDismissible: true*/
+//   );
+// }
+
+showAlertDialog(BuildContext context) {
+  // set up the buttons
+  Widget cancelButton = FlatButton(
+    child: Text(
+      "Cancel",
+      style: TextStyle(color: Colors.red, fontWeight: FontWeight.w600),
+    ),
+    onPressed: () {
+      Navigator.of(context, rootNavigator: true).pop();
+    },
+  );
+  Widget continueButton = FlatButton(
+    child: Text(
+      "OK",
+      style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600),
+    ),
+    onPressed: () {
+      Navigator.of(context, rootNavigator: true).pop();
+      Navigator.of(context).pop();
+    },
+  );
+
+  // set up the AlertDialog
+  AlertDialog alert = AlertDialog(
+    title: Text("Log Out"),
+    content: Text("Are you sure you want to Log Out?"),
+    actions: [
+      cancelButton,
+      continueButton,
+    ],
+  );
+
+  // show the dialog
+  showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 6, sigmaY: 6), child: alert);
+      },
+      barrierDismissible: true);
 }
