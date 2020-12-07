@@ -8,7 +8,7 @@ import 'package:reserva_flutter/Map.dart';
 import 'package:english_words/english_words.dart' as english_words;
 
 void main() {
-  runApp(MapThing());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

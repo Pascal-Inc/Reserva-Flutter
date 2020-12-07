@@ -15,11 +15,9 @@ class AboutUs extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.black, fontStyle: FontStyle.normal)),
                 SizedBox(height: 20, width: 20),
-                Text(
-                  "This is a long text someone help wrap",
+                Text("A company that improves lives and impacts society",
                   overflow: TextOverflow.ellipsis,
                 ),
-
                 /*Row(
                   children: [Text("Lorem Ipsum")],
                   // children: [
