@@ -35,7 +35,8 @@ class MyApp extends StatelessWidget {
           // closer together (more dense) than on mobile platforms.
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: Tutorial() /*CalenarThing()*/ /*AppBarSearchExample()*/);
+        home:
+            MapThing() /*Tutorial()*/ /*CalenarThing()*/ /*AppBarSearchExample()*/);
   }
 }
 
