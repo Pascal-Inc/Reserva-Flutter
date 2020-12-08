@@ -13,6 +13,11 @@ class _EventDetailPageState extends State<EventDetailPage> {
           title: Text('Singapore Food Festival'),
           centerTitle: true,
         ),
-        body: Center(child: Image(image: AssetImage("images-1.jpeg"))));
+        body: Padding(
+          padding: EdgeInsets.only(top: 0, right: 0, left: 0),
+          child: Center(
+              child: Image(
+                  image: AssetImage('Assets/images-1.jpeg'), fit: BoxFit.fill)),
+        ));
   }
 }
