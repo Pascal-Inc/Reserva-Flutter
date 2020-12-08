@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         home:
-            MapThing() /*Tutorial()*/ /*CalenarThing()*/ /*AppBarSearchExample()*/);
+            EventDetailPage() /*MapThing()*/ /*Tutorial()*/ /*CalenarThing()*/ /*AppBarSearchExample()*/);
   }
 }
 
