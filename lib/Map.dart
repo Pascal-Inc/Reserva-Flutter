@@ -24,15 +24,15 @@ class MapThing extends StatefulWidget {
 class _MapThingState extends State<MapThing> {
   Completer<GoogleMapController> _controller = Completer();
 
-  static const LatLng _center = const LatLng(45.521563, -122.677433);
+  static const LatLng _center = const LatLng(1.3521, 103.8198);
   final Set<Marker> _markers = {};
   LatLng _lastMapPosition = _center;
   MapType _currentMapType = MapType.normal;
 
   static final CameraPosition _position1 = CameraPosition(
-    bearing: 192.833,
-    target: LatLng(45.531563, -122.677433),
-    tilt: 59.440,
+    bearing: 0,
+    target: LatLng(1.3521, 103.8198),
+    tilt: 0,
     zoom: 11.0,
   );
 
