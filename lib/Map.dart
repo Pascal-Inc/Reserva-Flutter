@@ -51,9 +51,34 @@ class _MapThingState extends State<MapThing> {
 
   _onMapTypeButtonPressed() {
     setState(() {
-      _currentMapType = _currentMapType == MapType.normal
-          ? MapType.satellite
-          : MapType.normal;
+      switch (_currentMapType) {
+        case MapType.normal:
+          {
+            _currentMapType = MapType.satellite;
+          }
+          break;
+        case MapType.satellite:
+          {
+            _currentMapType = MapType.terrain;
+          }
+          break;
+        case MapType.terrain:
+          {
+            _currentMapType = MapType.hybrid;
+          }
+          break;
+        case MapType.hybrid:
+          {
+            _currentMapType = MapType.normal;
+          }
+          break;
+        default:
+          {}
+          break;
+      }
+      // _currentMapType = _currentMapType == MapType.normal
+      //     ? MapType.satellite
+      //     : MapType.normal;
     });
   }
 
